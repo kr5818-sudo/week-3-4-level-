@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class LargestOfThreeNumbers {
+
+    public static void main(String[] args) {
+
+        // Create Scanner object
+        Scanner input = new Scanner(System.in);
+
+        // Declare variables
+        int number1, number2, number3;
+
+        // Get input from user
+        System.out.print("Enter first number: ");
+        number1 = input.nextInt();
+
+        System.out.print("Enter second number: ");
+        number2 = input.nextInt();
+
+        System.out.print("Enter third number: ");
+        number3 = input.nextInt();
+
+        // Check which number is largest
+        if (number1 > number2 && number1 > number3) {
+            System.out.println("Is the first number the largest? Yes");
+            System.out.println("Is the second number the largest? No");
+            System.out.println("Is the third number the largest? No");
+        }
+        else if (number2 > number1 && number2 > number3) {
+            System.out.println("Is the first number the largest? No");
+            System.out.println("Is the second number the largest? Yes");
+            System.out.println("Is the third number the largest? No");
+        }
+        else if (number3 > number1 && number3 > number2) {
+            System.out.println("Is the first number the largest? No");
+            System.out.println("Is the second number the largest? No");
+            System.out.println("Is the third number the largest? Yes");
+        }
+        else {
+            System.out.println("Some or all numbers are equal.");
+        }
+
+        input.close();
+    }
+}
